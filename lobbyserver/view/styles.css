@@ -1,0 +1,58 @@
+body {
+  background-color:black;
+  font-family: Tahoma;
+  font-size: 13px;
+  color: white;
+}
+h2 {
+  font-size: 13px;
+}
+ul#menu {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  list-style-type: none;
+  list-style-image: none;
+}
+ul#menu li {
+  display: inline;
+}
+ul#menu li a {
+  margin: 4px;
+  padding: 5px 20px 5px 20px;
+}
+a:link, a:visited {
+  color:#ff7e00;
+  text-decoration: none;    
+}
+a:hover {
+  text-decoration: underline;
+}
+table.tbl {
+  font-family: Tahoma;
+  font-size: 13px;
+  border: 1px solid #ffba00;
+}
+table.tbl td, table.tbl th {
+  text-align: center;
+}
+table.tbl th {
+  background-color: #ffba00;
+  padding: 6px 10px;
+  color: #ff7e00;
+}
+table.tbl tr {
+  background-color: #0f0f0f;
+}
+table.tbl td {
+  padding: 4px 10px;
+}
+table.tbl tr:hover {
+  background-color: #1e1e1e;
+}
+table.tbl td.playername {
+  text-align: left;
+}
+table.tbl100 {
+  width: 100%;
+}

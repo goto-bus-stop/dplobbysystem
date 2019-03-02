@@ -1,0 +1,20 @@
+age2lobby	BITMAP	AGE2LOBBY.bmp
+age2xlobby	BITMAP	AGE2XLOBBY.bmp
+banner		BITMAP	BANNER.bmp
+bubble		BITMAP	BUBBLE.bmp
+button		BITMAP	BUTTON.bmp
+info		BITMAP	INFO.bmp
+latency		BITMAP	LATENCY.bmp
+lock		BITMAP	LOCK.bmp
+logo		BITMAP	LOGO.bmp
+dot		BITMAP	DOT.bmp
+room		BITMAP	ROOM.bmp
+splash		BITMAP	SPLASH.bmp
+tool		BITMAP	TOOL.bmp
+roombkg		BITMAP	ROOMBKG.bmp
+chat		BITMAP	CHAT.bmp
+send		BITMAP	SEND.bmp
+emofont		BITMAP	EMOFONT.bmp
+emots		BITMAP	EMOTS.bmp
+
+CONFIG		CONFIG	CONFIG.TXT

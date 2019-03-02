@@ -1,0 +1,59 @@
+object HintForm: THintForm
+  Left = 425
+  Top = 331
+  Width = 158
+  Height = 113
+  VertScrollBar.Position = 2
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWhite
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnPaint = FormPaint
+  OnResize = FormResize
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PlayerNameLabel: TLabel
+    Left = 8
+    Top = 6
+    Width = 76
+    Height = 16
+    Caption = 'PlayerName'
+    Color = clBlack
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = True
+  end
+  object PingLabel: TLabel
+    Left = 8
+    Top = 30
+    Width = 24
+    Height = 13
+    Caption = 'Ping:'
+    Transparent = True
+  end
+  object RatingLabel: TLabel
+    Left = 8
+    Top = 46
+    Width = 35
+    Height = 13
+    Caption = 'Rating:'
+    Transparent = True
+  end
+  object StatusLabel: TLabel
+    Left = 8
+    Top = 62
+    Width = 35
+    Height = 13
+    Caption = 'Status:'
+    Transparent = True
+  end
+end

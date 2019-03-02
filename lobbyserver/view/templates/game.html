@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <title>Game Stats</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li><a href="games.php">Games</a></li>
+      <li><a href="ratings.php">Ratings</a></li>
+      <li><a href="hostedgames.php">Hosted Games</a></li>
+    </ul>
+    <table>
+    <tr>
+      <td>
+        <table class="tbl tbl100">
+        <tr>
+          <th>Players</th>
+          <th>Map</th>
+          <th>Duration</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td>{PLAYERS}</td>
+          <td>{MAP}</td>
+          <td>{DURATION}</td>
+          <td>{DATETIME}</td>
+        </tr>
+        </table>
+      </td>
+    </tr>
+<tr>
+  <td>
+<!-- players table -->
+<table width="100%">
+<tr>
+  <!-- BEGIN team -->
+  <td>
+    <table class="tbl tbl100">
+    <!-- BEGIN player -->
+    <tr>
+      <!-- IF team.player.TEAM eq 0 -->
+      <td style="text-align: right">
+        <strong><a href="player.php?id={team.player.ID}">{team.player.NAME}</a></strong>
+        <!-- IF team.player.RESULT eq 1 -->
+        <span style="color:green">&uarr;</span>
+        <!-- ELSE -->
+        <span style="color:red">&darr;</span>
+        <!-- ENDIF --><br />Rating: <strong>{team.player.RATING}</strong>
+        <!-- IF team.player.RESULT eq 1 -->
+        <span style="color:green">{team.player.WIN_PTS}</span>
+        <!-- ELSE -->
+        <span style="color:red">{team.player.LOSS_PTS}</span>
+        <!-- ENDIF -->
+      </td>
+      <td style="width:32px"><img src="images/civs/{team.player.CIV_ID}.gif"></td>
+      <!-- ELSE -->
+      <td style="width:32px"><img src="images/civs/{team.player.CIV_ID}.gif"></td>
+      <td style="text-align:left">
+        <!-- IF team.player.RESULT eq 1 -->
+        <span style="color:green">&uarr;</span>
+        <!-- ELSE -->
+        <span style="color:red">&darr;</span>
+        <!-- ENDIF -->
+        <strong><a href="player.php?id={team.player.ID}">{team.player.NAME}</a></strong><br />Rating: <strong>{team.player.RATING}</strong>
+        <!-- IF team.player.RESULT eq 1 -->
+        <span style="color:green">{team.player.WIN_PTS}</span>
+        <!-- ELSE -->
+        <span style="color:red">{team.player.LOSS_PTS}</span>
+        <!-- ENDIF -->
+      </td>
+      <!-- ENDIF -->
+    </tr>
+    <!-- END player -->
+    </table>
+  </td>
+<!-- END team -->
+</tr>
+</table>
+  </td>
+</tr>
+<tr>
+  <td>
+  <!-- overall stats table -->
+    <table class="tbl tbl100">
+    <tr>
+      <th>Overall Score</th>
+      <th>Military Score</th>
+      <th>Economy Score</th>
+      <th>Technology Score</th>
+      <th>Society Score</th>
+      <th>Total Score</th>
+    </tr>
+    <!-- BEGIN player -->
+    <tr>
+      <td class="playername"><a href="player.php?id={player.ID}">{player.NAME}</a></td>
+      <td>{player.MILITARY_SCORE}</td>
+      <td>{player.ECONOMY_SCORE}</td>
+      <td>{player.TECHNOLOGY_SCORE}</td>
+      <td>{player.SOCIETY_SCORE}</td>
+      <td>{player.TOTAL_SCORE}</td>
+    </tr>
+    <!-- END players -->
+    </table>
+  </td>
+</tr>
+<tr>
+  <td>
+<!-- military score table -->
+<table class="tbl tbl100">
+<tr>
+  <th>Military Score</th>
+  <th>Units Killed</th>
+  <th>Units Lost</th>
+  <th>Buildings Razed</th>
+  <th>Buildings Lost</th>
+  <th>Units Converted</th>
+</tr>
+<!-- BEGIN player -->
+<tr>
+  <td class="playername"><a href="player.php?id={player.ID}">{player.NAME}</a></td>
+  <td>{player.UNITS_KILLED}</td>
+  <td>{player.UNITS_LOST}</td>
+  <td>{player.BUILDINGS_RAZED}</td>
+  <td>{player.BUILDINGS_LOST}</td>
+  <td>{player.UNITS_CONVERTED}</td>
+</tr>
+<!-- END player -->
+</table>
+  </td>
+</tr>
+<tr>
+  <td>
+
+<!-- economy score table -->
+<table class="tbl tbl100">
+<tr>
+  <th>Economy Score</th>
+  <th>Food Collected</th>
+  <th>Wood Collected</th>
+  <th>Stone Collected</th>
+  <th>Gold Collected</th>
+  <th>Trade Profit</th>
+  <th>Tribute Received</th>
+  <th>Tribute Sent</th>
+</tr>
+<!-- BEGIN player -->
+<tr>
+  <td class="playername"><a href="player.php?id={player.ID}">{player.NAME}</a></td>
+  <td>{player.FOOD_COLLECTED}</td>
+  <td>{player.WOOD_COLLECTED}</td>
+  <td>{player.STONE_COLLECTED}</td>
+  <td>{player.GOLD_COLLECTED}</td>
+  <td>{player.TRADE_PROFIT}</td>
+  <td>{player.TRIBUTE_RCVD}</td>
+  <td>{player.TRIBUTE_SENT}</td>
+  </tr>
+<!-- END player -->
+</table>
+  </td>
+</tr>
+<tr>
+  <td>
+
+<!-- technology score table -->
+<table class="tbl tbl100">
+<tr>
+  <th>Technology Score</th>
+  <th>Feudal Time</th>
+  <th>Castle Time</th>
+  <th>Imperial Time</th>
+  <th>Map Explored</th>
+  <th>Research Count</th>
+  <th>Research Percent</th>
+</tr>
+<!-- BEGIN player -->
+<tr>
+  <td class="playername"><a href="player.php?id={player.ID}">{player.NAME}</a></td>
+  <td>{player.FEUDAL_AGE}</td>
+  <td>{player.CASTLE_AGE}</td>
+  <td>{player.IMPERIAL_AGE}</td>
+  <td>{player.MAP_EXPLORED}</td>
+  <td>{player.RESEARCH_COUNT}</td>
+  <td>{player.RESEARCH_PERCENT}</td>
+</tr>
+<!-- END player -->
+</table>
+  </td>
+</tr>
+<tr>
+  <td>
+
+<!-- society score table -->
+<table class="tbl tbl100">
+<tr>
+  <th>Society Score</th>
+  <th>Total Wonders</th>
+  <th>Total Castles</th>
+  <th>Relics Captured</th>
+  <th>Relic Gold</th>
+  <th>Villager High</th>
+</tr>
+<!-- BEGIN player -->
+<tr>
+  <td class="playername"><a href="player.php?id={player.ID}">{player.NAME}</a></td>
+  <td>{player.TOTAL_WONDERS}</td>
+  <td>{player.TOTAL_CASTLES}</td>
+  <td>{player.RELICS_CAPTURED}</td>
+  <td>{player.RELIC_GOLD}</td>
+  <td>{player.VILLAGER_HIGH}</td>
+</tr>
+<!-- END player -->
+</table>
+  </td>
+</tr>
+
+  </body>
+</html>

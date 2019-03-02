@@ -1,0 +1,10 @@
+switch (I want to know) {
+  case (Version changes):
+  case (Details):
+  case (How to install):
+    goto http://code.google.com/p/dplobbysystem/
+    break;
+}
+if (you are here) {
+  exit;
+}

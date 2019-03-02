@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <title>Player</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li><a href="games.php">Games</a></li>
+      <li><a href="ratings.php">Ratings</a></li>
+      <li><a href="hostedgames.php">Hosted Games</a></li>
+    </ul>
+    <h2>Rating</h2>
+    <table class="tbl">
+    <tr>
+      <th>Player</th>
+      <th>Rating</th>
+      <th>Games</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Win %</th>
+      <th>Streak</th>
+      <th>Inc.</th>
+    </tr>
+    <tr>
+      <td class="playername"><a href="#">{PLAYERNAME}</a></td>
+      <td>{RATING}</td>
+      <td>{GAMES}</td>
+      <td>{WINS}</td>
+      <td>{LOSSES}</td>
+      <td>{WINPERC}</td>
+      <td>{STREAK}</td>
+      <td>{INCOMPLETES}</td>
+    </tr>
+    </table>
+    <h2>Maps</h2>
+    <table class="tbl">
+    <tr>
+      <th>Map</th>
+      <th>Games</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Win %</th>
+      <th>Streak</th>
+      <th>Inc.</th>
+    </tr>
+    <!-- BEGIN map -->
+    <tr>
+      <td>{map.MAP}</td>
+      <td>{map.GAMES}</td>
+      <td>{map.WINS}</td>
+      <td>{map.LOSSES}</td>
+      <td>{map.WINPERC}</td>
+      <td>{map.STREAK}</td>
+      <td>{map.INCOMPLETES}</td>
+    </tr>
+    <!-- END map -->
+    </table>
+    <h2>Games</h2>
+    <table class="tbl">
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Map</th>
+      <th>Duration</th>
+    </tr>
+    <!-- BEGIN game -->
+    <tr>
+      <td><a href="game.php?id={game.ID}">{game.ID}</a></td>
+      <td>{game.DATETIME}</td>
+      <td>{game.MAP}</td>
+      <td>{game.DURATION}</td>
+    </tr>
+    <!-- END game -->
+    </table>
+  </body>
+</html>
